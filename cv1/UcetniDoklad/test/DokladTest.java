@@ -10,6 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import ucetnidoklad.VypoctenyDoklad;
 
 /**
  *
@@ -47,11 +48,39 @@ public class DokladTest {
      */
     @Test
     public void TestDPH(){
+        System.out.println("Test vypoctu DPH a celkove ceny");
+        
         int cisloDokladu = 123;
         float celkemBezDph = 100;
         int procentoDph = 21;
-        VypoctenyDoklad instance = new VypoctenyDoklad();
-    
+        VypoctenyDoklad instance = new VypoctenyDoklad(cisloDokladu,celkemBezDph,procentoDph);
+        float CekaneDPH = 21;
+        float CekanaCena = 121;    
+        float VypocteneDPH = instance.getDph();
+        float VypoctenaCena = instance.getCelkemSDph();   
+        assertEquals(CekaneDPH,VypocteneDPH,0.0);
+        assertEquals(CekanaCena,VypoctenaCena,0.0);
+        
+        celkemBezDph = 100;
+        procentoDph = 0;
+        CekaneDPH = 0;
+        CekanaCena = 100;
+        instance = new VypoctenyDoklad(cisloDokladu,celkemBezDph,procentoDph);
+        VypocteneDPH = instance.getDph();
+        VypoctenaCena = instance.getCelkemSDph();
+        assertEquals(CekaneDPH,VypocteneDPH,0.0);
+        assertEquals(CekanaCena,VypoctenaCena,0.0);
+        
+        celkemBezDph = 0;
+        procentoDph = 21;
+        CekaneDPH = 0;
+        CekanaCena = 0;
+        instance = new VypoctenyDoklad(cisloDokladu,celkemBezDph,procentoDph);
+        VypocteneDPH = instance.getDph();
+        VypoctenaCena = instance.getCelkemSDph();
+        assertEquals(CekaneDPH,VypocteneDPH,0.0);
+        assertEquals(CekanaCena,VypoctenaCena,0.0);
+        
     }
     
 }
