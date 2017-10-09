@@ -5,8 +5,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Třída pro administraci účetního dokladu
+ * @author tym2
+ */
 public class AdministraceDoklad {
 
+    /**
+     * 
+     * @param cisloDokladu Jedinečné číslo dokladu
+     * @return Vrátí všechny údaje o účetním dokladu, pokud jsou hodnoty správně zadány
+     */
     public static VypoctenyDoklad novyDoklad(int cisloDokladu){
         Scanner scan = new Scanner(System.in);
         System.out.println("Zadejte cenu bez DPH: ");
@@ -22,6 +31,11 @@ public class AdministraceDoklad {
         return null;
     }
 
+    /**
+     * 
+     * @param doklady pole všech účetních dokladů
+     * @param pocet celkový počet všech účetních dokladů
+     */
     public static void vypisDokladu(VypoctenyDoklad doklady[], int pocet){
         System.out.println("Vypis vsech dokladu");
         for (int i = 0; i < pocet -1; i++) {
@@ -29,34 +43,53 @@ public class AdministraceDoklad {
         }
     }
 
+    /**
+     * 
+     * @param doklady pole všech účetních dokladů
+     * @param pocet celkový počet všech účetních dokladů
+     * @throws FileNotFoundException vyjímka, když soubor nebude existovat
+     * @throws IOException vyjímka, pokud doklady nelze zapsat do souboru
+     */
     public static void vypisDoSouboruCSV(VypoctenyDoklad doklady[], int pocet) throws FileNotFoundException, IOException {
         FileWriter fw = new FileWriter("doklady.csv", false);
-        fw.append("Cislo dokladu");
-        fw.append(',');
-        fw.append("Cena bez DPH");
-        fw.append(',');
-        fw.append("Sazba DPH");
-        fw.append(',');
-        fw.append("DPH");
-        fw.append(',');
-        fw.append("Cena s DPH");
-        fw.append('\n');
-        for (int i = 0; i < pocet - 1; i++){
-            fw.append(Integer.toString(doklady[i].getCisloDokladu()));
-            fw.append(',');
-            fw.append(Float.toString(doklady[i].getCelkemBezDph()));
-            fw.append(',');
-            fw.append(Integer.toString(doklady[i].getProcentoDph()));
-            fw.append(',');
-            fw.append(Float.toString(doklady[i].getDph()));
-            fw.append(',');
-            fw.append(Float.toString(doklady[i].getCelkemSDph()));
-            fw.append('\n');
+        if(fw != null) {
+            try{
+                fw.append("Cislo dokladu");
+                fw.append(',');
+                fw.append("Cena bez DPH");
+                fw.append(',');
+                fw.append("Sazba DPH");
+                fw.append(',');
+                fw.append("DPH");
+                fw.append(',');
+                fw.append("Cena s DPH");
+                fw.append('\n');
+                for (int i = 0; i < pocet - 1; i++){
+                    fw.append(Integer.toString(doklady[i].getCisloDokladu()));
+                    fw.append(',');
+                    fw.append(Float.toString(doklady[i].getCelkemBezDph()));
+                    fw.append(',');
+                    fw.append(Integer.toString(doklady[i].getProcentoDph()));
+                    fw.append(',');
+                    fw.append(Float.toString(doklady[i].getDph()));
+                    fw.append(',');
+                    fw.append(Float.toString(doklady[i].getCelkemSDph()));
+                    fw.append('\n');
+                }
+                fw.flush();
+                fw.close();
+            }catch(IOException ex){
+                throw new IOException("Nelze uložit doklady.");
+            }
+    } else {
+            throw new FileNotFoundException("Souboru neexistuje.");
         }
-        fw.flush();
-        fw.close();
     }
-
+    /**
+     * 
+     * @param doklady pole všech účetních dokladů
+     * @param cisloDokladu jedinečné číslo dokladu
+     */
     public static void upravitDoklad(VypoctenyDoklad doklady[], int cisloDokladu){
         Scanner scan = new Scanner(System.in);
         System.out.println("Zadejte cislo dokladu, ktery chcete upravit:");
@@ -84,6 +117,12 @@ public class AdministraceDoklad {
         }
     }
 
+    /**
+     * 
+     * @param args
+     * @throws FileNotFoundException vyjímka, když soubor nebude existovat
+     * @throws IOException vyjímka, pokud doklady nelze zapsat do souboru
+     */
     public static void main(String[] args) throws FileNotFoundException, IOException {
         VypoctenyDoklad[] doklady = new VypoctenyDoklad[100];
         Scanner scan = new Scanner(System.in);
