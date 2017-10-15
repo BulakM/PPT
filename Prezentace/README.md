@@ -2,8 +2,9 @@
 ## Info o prezentaci
 Prezentace bude klasická prezentace v PowerPointu s tím, že součástí prezentace budou ukázky, jak vytvářet projekty a ukázky programů. Uvítám jakýkoliv návrh na vylepšení prezentace.
 
-Prosím doplňte své jméno k bodu, který chcete prezentovat.
 ## Rozvržení snímků na jednotlivé členy týmu
+Prosím doplňte své jméno k bodu, který chcete prezentovat.
+
 Snímek 1 - 4  (takový úvod do prezentace) -
 
 Snímek 5 (popis okna a jak založit projekt) -
