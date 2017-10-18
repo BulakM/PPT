@@ -7,7 +7,7 @@ Prosím doplňte své jméno k bodu, který chcete prezentovat.
 
 Snímek 1 - 4  (takový úvod do prezentace) -
 
-Snímek 5 (popis okna a jak založit projekt) -
+Snímek 5 (popis okna a jak založit projekt) - Jan Krejčí
 
 Snímek 6 - 7 (komponenta a programové pozadí) -
 
