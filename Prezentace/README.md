@@ -11,7 +11,7 @@ Snímek 5 (popis okna a jak založit projekt) - Jan Krejčí
 
 Snímek 6 - 7 (komponenta a programové pozadí) -
 
-Snímek 8 - 11 (jednotlivé komponenty) -
+Snímek 8 - 11 (jednotlivé komponenty) - Martin Bulák
 
 Snímek 12 - 15 (ukázky programů) - Jiří Klusáček
 
