@@ -5,7 +5,7 @@ Prezentace bude klasická prezentace v PowerPointu s tím, že součástí preze
 ## Rozvržení snímků na jednotlivé členy týmu
 Prosím doplňte své jméno k bodu, který chcete prezentovat.
 
-Snímek 1 - 4  (takový úvod do prezentace) -
+Snímek 1 - 4  (takový úvod do prezentace) - Vojta Janoušek
 
 Snímek 5 (popis okna a jak založit projekt) - Jan Krejčí
 
