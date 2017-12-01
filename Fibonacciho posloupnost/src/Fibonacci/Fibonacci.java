@@ -13,6 +13,7 @@ public class Fibonacci {
 
     public int CalcRek(int n)
         {
+
             if (n == 0) return 0;
             else if (n == 1) return 1;
             else return CalcRek(n-1) + CalcRek(n-2);
@@ -20,7 +21,29 @@ public class Fibonacci {
 
         public int CalcRekTable(int n, int[] p)
         {
-            if (n == 0)
+            int f = 0;
+            if(n < 2){
+                if (n == 0) {
+                    f = p[0];
+                }
+                if (n == 1){
+                    p[1] = 1;
+                    f = p[1];
+                }
+            }else{
+                f = p[n];
+                if (f == 0) {
+                    f = CalcRekTable(n-1, p) + CalcRekTable(n-2, p);
+                    p[n] = f;
+                }
+            }
+            return f;
+        }
+
+        
+        /*public int CalcRekTable(int n, int[] p)
+        {
+        if (n == 0)
             {
                 p[n] = 0;
                 return p[n];
@@ -32,10 +55,10 @@ public class Fibonacci {
             }
             else
             {
-                p[n] = CalcRek(n-1) + CalcRek(n-2)
+                p[n] = CalcRekTable(n-1, p) + CalcRekTable(n-2, p);
                 return p[n];
             }
-        }
+        }*/
 
         public int CalcNerek(int n)
         {
@@ -52,5 +75,4 @@ public class Fibonacci {
             }
             return Result;
         }
-
 }

@@ -19,11 +19,11 @@ public class FibonaccihoPosloupnost {
         // TODO code application logic here
         int n;
         System.out.print("Zadej kolikátý prvek chceš vypočítat: ");
-        n = 6;
+        n = 10;
         System.out.println(n);
         Fibonacci Fb = new Fibonacci();
         int[] p = new int[n+1];
-
+        for (int i=0; i<n; i++) p[i] = 0;
         System.out.println("\nProvedené výpočty: ");
         System.out.println("1. Rekurzivně");
         System.out.println(Fb.CalcRek(n));
@@ -31,6 +31,10 @@ public class FibonaccihoPosloupnost {
         System.out.println(Fb.CalcNerek(n));
         System.out.println("3. Rekurzivně s pamatováním prvků");
         System.out.println(Fb.CalcRekTable(n,p));
+        System.out.println("Pro informaci uvádíme výpis pole");
+        for (int i = 0; i <p.length; i++) {
+            System.out.print(p[i] + ", ");
+        }
 
 
 
