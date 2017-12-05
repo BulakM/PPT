@@ -4,6 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+public enum TypDokladu
+{
+    Vydajovy_doklad = 0,
+    Prijmovy_doklad = 1
+}
+public enum FormaDokladu
+{
+    Faktura = 0,
+    Zalohova_faktura = 1
+}
+
 namespace UcetniDoklady.Data
 {
     class Doklad
@@ -17,18 +28,10 @@ namespace UcetniDoklady.Data
         public Decimal CenaSDPH { get; set; }
         public bool Calc { get; private set; }
         public bool Zauct { get; set; }
-        public enum TypDokladu
-        {
-            Vydajovy_doklad = 0,
-            Prijmovy_doklad = 1
-        }
+
         public TypDokladu Typ { get; set; }
-        public enum FormaDokladu
-        {
-            Faktura = 0,
-            Zalohova_faktura = 1
-        }
-        public FormaDokladu Forma;
+
+        public FormaDokladu Forma { get; set; }
         private Decimal _zaokr;
         public Decimal Zaokr 
         {
@@ -43,10 +46,10 @@ namespace UcetniDoklady.Data
             }
         }
 
-        public Doklad(string cisloDokladu, DateTime datum_Vystaveni, Decimal cenaBezDPH, TypDokladu typ, FormaDokladu forma)
+        public Doklad(string cisloDokladu, DateTime datum_Vystaveni, Decimal cenaBezDPH, string typ, string forma)
         {
-            Typ = typ;
-            Forma = forma;
+            Typ = (TypDokladu)Enum.Parse(typeof(TypDokladu), typ);
+            Forma = (FormaDokladu)Enum.Parse(typeof(FormaDokladu), forma);
             CisloDokladu = cisloDokladu;
             Datum_Vystaveni = datum_Vystaveni;
             CenaBezDPH = cenaBezDPH;
@@ -106,6 +109,10 @@ namespace UcetniDoklady.Data
             return d1.CisloDokladu != d2.CisloDokladu; // todo all
         }
 
+        public static implicit operator List<object>(Doklad v)
+        {
+            throw new NotImplementedException();
+        }
 
         public void CalculatePrice()
         {

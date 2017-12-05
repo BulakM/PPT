@@ -19,3 +19,12 @@ C:\Users\Pracovní účet\Documents\Materiály\Materiály 5. semestr\xPPT\Predna
 C:\Users\Pracovní účet\Documents\Materiály\Materiály 5. semestr\xPPT\Prednaska_09\cviceni\UcetniDoklady\UcetniDoklady\bin\Debug\UcetniDoklady.exe
 C:\Users\Pracovní účet\Documents\Materiály\Materiály 5. semestr\xPPT\Prednaska_09\cviceni\UcetniDoklady\UcetniDoklady\bin\Debug\UcetniDoklady.pdb
 C:\Users\Pracovní účet\Documents\Materiály\Materiály 5. semestr\xPPT\Prednaska_09\cviceni\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.MainForm.resources
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\bin\Debug\UcetniDoklady.exe.config
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\bin\Debug\UcetniDoklady.exe
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\bin\Debug\UcetniDoklady.pdb
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.MainForm.resources
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.Properties.Resources.resources
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.csproj.GenerateResource.Cache
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.csproj.CoreCompileInputs.cache
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.exe
+C:\Users\Pracovní účet\Documents\Škola úkoly\5. Semestr\PPT\cv9\UcetniDoklady\UcetniDoklady\obj\Debug\UcetniDoklady.pdb

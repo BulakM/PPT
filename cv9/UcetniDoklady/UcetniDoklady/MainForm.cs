@@ -19,6 +19,9 @@ namespace UcetniDoklady
         public MainForm()
         {
             InitializeComponent();
+            lDoklady.Add(new Data.Doklad("1", DateTime.Now.AddDays(-1), 400, "Vydajovy_doklad", "Faktura"));
+            lDoklady.Add(new Data.Doklad("2", DateTime.Now, 600, "Vydajovy_doklad", "Faktura"));
+            lDoklady.Add(new Data.Doklad("3", DateTime.Now, 100, "Vydajovy_doklad", "Faktura"));
         }
 
         private void btZauctuj_Click(object sender, EventArgs e)
@@ -62,10 +65,16 @@ namespace UcetniDoklady
                 reportPDF.Append("datum vystavení;datum splatnosti;");
             reportPDF.Append("cena s dph;");
             if (chcbShowDPH.Checked)
-                reportPDF.Append("sazbaDPH");
+                reportPDF.Append("sazbaDPH;");
+            reportPDF.Append("Typ dokladu");
             reportPDF.AppendLine();
 
             CreateTemplateForReport(ref reportPDF, dkld, ";");
+
+            reportPDF.Append(dkld.Typ);
+            reportPDF.Append(";");
+
+            Console.WriteLine(reportPDF.ToString());
         }
 
         private void btReportAllSelected_Click(object sender, EventArgs e)
